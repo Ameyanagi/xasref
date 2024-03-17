@@ -24,6 +24,7 @@ Installation
 ------------
 
 .. code-block:: bash
+
     pip install git+https://github.com/Ameyanagi/xasref
 
 
@@ -32,7 +33,16 @@ How to use
 
 The reference can be readily read by `get_ref_dict`. The following is an example to read Fe K reference data and plot it.
 
-.. inculde:: ./examples/01_basic.py
+.. code-block:: python
+
+    import matplotlib.pyplot as plt
+    from xasref import get_ref_dict
+
+
+    ref = get_ref_dict()
+    fe_k_group = ref["Fe K"]["group"]
+    plt.plot(fe_k_group.energy, fe_k_group.mu)
+    plt.show()
 
 How to generate the reference from the source and check the reference data
 ----------
@@ -44,6 +54,7 @@ Howevery, if you prefer to do this process by yourself, the following is the ins
 The `g` or `--generate` option will generate the reference data from the source file and save it as a dat file.
 
 .. code-block:: bash
+
     xasref -g
 
 The `c` or `--check` option is use to check the quality of the reference dat file generated. The following is the example to check the reference data.
@@ -51,12 +62,14 @@ It will plot the reference data along with the first derivative, e0 and expected
 Please make sure that the data look reasonable to you.
 
 .. code-block:: bash
+
     xasref -c
 
 
 `-g` and `-c` can be used together as follows.
 
 .. code-block:: bash
+
     xasref -g -c
 
 
