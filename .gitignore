@@ -107,3 +107,4 @@ ENV/
 
 # Mac related
 **/.DS_Store
+**/Thumbs.db
