@@ -72,6 +72,30 @@ Please make sure that the data look reasonable to you.
 
     xasref -g -c
 
+List of elements
+----------------
+
+- V K 5465eV
+- Cr K 5989eV
+- Mn K 6539eV
+- Fe K 7112eV
+- Co K 7709eV
+- Ni K 8333eV
+- Cu K 8979eV
+- Zn K 9659eV
+- Mo K 20000eV
+- Ru K 22117eV
+- Rh K 23220eV
+- Pd K 24350eV
+- Ag K 25514eV
+- Cd K 26711eV
+- In K 27940eV
+- Sn K 29200eV
+- W K 10207eV
+- Re L3 10535eV
+- Pt L3 11564eV
+- Au L3 11919eV
+- Zr K 17998eV
 
 * Free software: MIT license
 * Documentation: https://xasref.readthedocs.io.
