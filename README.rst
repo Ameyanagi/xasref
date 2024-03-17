@@ -33,6 +33,7 @@ How to use
 
 The reference can be readily read by `get_ref_dict`. The following is an example to read Fe K reference data and plot it.
 
+
 .. code-block:: python
 
     import matplotlib.pyplot as plt
@@ -43,6 +44,17 @@ The reference can be readily read by `get_ref_dict`. The following is an example
     fe_k_group = ref["Fe K"]["group"]
     plt.plot(fe_k_group.energy, fe_k_group.mu)
     plt.show()
+
+The dictionary that is returned by `get_ref_dict` contains the following keys.
+You would probably need only `group`.
+
+- `element`: The element name
+- `group`: The reference data as a Larch group
+- `edge`: The edge name
+- `e0`: The e0 value
+- `path`: The path to the reference data (source athena file)
+- `label`: The label of the reference data (e.g. `Fe foil Fe K`)
+- `dat_path`: The path to the reference data in a dat file
 
 How to generate the reference from the source and check the reference data
 ----------

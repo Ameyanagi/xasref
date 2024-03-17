@@ -203,7 +203,7 @@ def plot_foil(
     ax.axvline(group.e0, color="r", linestyle="--", label="e0")
     ax.axvline(ref_e0, color="g", linestyle="--", label="ref_e0")
     ax.set_xlabel("Energy (eV)")
-    ax.set_ylabel("$\mu")
+    ax.set_ylabel("$\mu$")
     ax2.set_ylabel("First derivative")
     ax.legend()
     ax.set_xlim(group.e0 - 20, group.e0 + 80)
