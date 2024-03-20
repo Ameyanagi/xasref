@@ -81,9 +81,9 @@ foil_dict_athena = [
     },
     {
         "element": "Mn",
-        "path": "foil/Mnfoil.prj",
+        "path": "foil/Mnfoil_QAS.prj",
         "dat_path": "foil/Mn foil Mn K.dat",
-        "group": "Mnfoil_x18b",
+        "group": "Mn_foil",
         "edge": "K",
         "e0": 6539,
     },
@@ -169,9 +169,9 @@ foil_dict_athena = [
     },
     {
         "element": "Zn",
-        "path": "foil/Znfoil.prj",
+        "path": "foil/Znfoil_QAS.prj",
         "dat_path": "foil/Zn foil Zn K.dat",
-        "group": "Znfoil_x18b",
+        "group": "Zn_foil",
         "edge": "K",
         "e0": 9659,
     },
@@ -254,6 +254,7 @@ def save_group_dat(group: Group, ref_e0: float, filename: str | None = None):
 def generate_foil_dat():
     for foil in foil_dict_athena:
         foil_path = os.path.join(root_directory, foil["path"])
+        print(foil_path)
         group = read_athena(foil_path)[foil["group"]]
         save_group_dat(
             group,
