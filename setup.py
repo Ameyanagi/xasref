@@ -41,7 +41,7 @@ setup(
     keywords="xasref",
     name="xasref",
     packages=find_packages(include=["xasref", "xasref.*"]),
-    package_data={"": ["foil", "foil/*"]},
+    package_data={"": ["xasre/foil", "xasref/foil/*"]},
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/Ameyanagi/xasref",
