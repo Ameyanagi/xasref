@@ -7,7 +7,7 @@ from larch import Group
 from larch.io import read_athena
 from larch.xafs import pre_edge
 
-root_directory = os.path.join(os.path.dirname(__file__), "../")
+root_directory = os.path.join(os.path.dirname(__file__))
 
 # The refenences collected and stored as a athena files.
 # This dictionary is used to generate the dat files including the energy, mu, and reference.
