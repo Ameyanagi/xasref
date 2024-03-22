@@ -279,10 +279,17 @@ def generate_foil_dat():
 #           "path": The path of the original file
 #           "label": Label of the spectrum
 #           "dat_path": The path of the dat file
-def get_ref_dict() -> dict[str, dict]:
+def get_ref_dict(elments: str | list[str] | None) -> dict[str, dict]:
     ref_dict = {}
 
-    for ref in foil_dict_athena:
+    if isinstance(elments, str):
+        foil_dict = [foil for foil in foil_dict_athena if foil["element"] == elments]
+    elif isinstance(elments, list):
+        foil_dict = [foil for foil in foil_dict_athena if foil["element"] in elments]
+    else:
+        foil_dict = foil_dict_athena
+
+    for ref in foil_dict:
         data = np.loadtxt(os.path.join(root_directory, ref["dat_path"]))
         group = Group(energy=data[:, 0], mu=data[:, 1])
         group.label = f"{ref['element']} foil {ref['element']}  {ref['edge']}"
