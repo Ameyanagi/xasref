@@ -279,7 +279,7 @@ def generate_foil_dat():
 #           "path": The path of the original file
 #           "label": Label of the spectrum
 #           "dat_path": The path of the dat file
-def get_ref_dict(elments: str | list[str] | None) -> dict[str, dict]:
+def get_ref_dict(elments: str | list[str] | None = None) -> dict[str, dict]:
     ref_dict = {}
 
     if isinstance(elments, str):
